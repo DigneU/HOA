@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/rolly.js@0.2.1/css/style.css"
+    />
+    <title>lodge</title>
+  </head>
+  <body>
+    <main class="app">
+      <header id="header">
+        <nav>
+          <div class="left-menu">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="lodge.html">the lodge</a></li>
+              <li><a href="services.html">services</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <a href="#home"><img src="static/images/HOA-Lodge.png" alt="" /></a>
+          </div>
+          <div class="right-menu">
+            <ul>
+              <li><a href="camping.html">camping</a></li>
+              <li><a href="about.html">about</a></li>             
+              <li><a class="book" href="#">book now</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section id="home" class="banner" data-scene>
+        <div class="container outer">
+          <div class="text" data-aos="zoom-out">
+            <h1>Welcome to </br>Heart of Africa Lodge </br><span>(Karibuni wote)</span></h1>
+            <p>
+              The wildebeest migration, is one of the “Seven New Wonders of the
+              World” and also known as The World Cup of Wildlife. If there is a
+              sight you have to experience, this is it!
+            </p>
+            <a class="btn" href="#lodge">learn more</a>
+          </div>
+        </div>
+      </section>
+      <section class="sec1" data-scene>
+        <div class="container">
+          <div class="sec1-inner">
+            <div class="text text-left" data-aos="zoom-out-right">
+              <h3>
+                Heart of Africa Lodge is an exquisitely beautiful
+                 escape offering guests a full-service vacation package. 
+              </h3>
+            </div>
+            <div class="text text-right" data-aos="zoom-out-left">
+              <p>
+                We are located in Arusha, a short five-minute drive to the only road leading to Tanzania’s incredible national
+                 parks in the Northern Safari Circuit.
+                 We welcome you to Heart of Africa Lodge whether you are traveling alone,
+                  as a couple, with friends, or as a whole family. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="lodge" class="sec2 left-right-sec" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="img">
+              <div class="img" data-aos="zoom-out-up">
+                <img src="static/images/3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="text" data-aos="zoom-out-left">
+              <div class="text-inner">
+                <h2>the lodges.</h2>
+                <p>
+                  We welcome you to Heart of Africa Lodge
+                   whether you are traveling alone, as
+                    a couple, with friends, or as a whole
+                     family. We offer unique and affordably
+                      priced single, double,
+                       and triple/family occupancy rooms.
+                        We invite you to experience the
+                         unparalleled beauty of Tanzania 
+                         and have an unforgettable adventure.
+                </p>
+                <a href="lodge.html" class="btn">explore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lodge" class="sec3 left-right-sec" data-scene>
+        <div class="container">
+          <div class="sec3-inner">
+            <div class="text" data-aos="zoom-out-right">
+              <div class="text-inner">
+                <h2>camping.</h2>
+                <p>
+                  Our modern, newly built lodge is unique.
+                 We also offer the budget-minded traveler the opportunity to camp on our property. </br>
+                  We have a level, grassy area where you may set up your gear or rent from us.
+                </p>
+                <a href="camping.html" class="btn">explore</a>
+              </div>
+            </div>
+            <div class="img">
+              <div class="img" data-aos="zoom-out-up">
+                <img src="static/images/30.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map" id="contact">
+        <h1 class="cont-txt">stay in touch</h1>
+        <div class="contact-in">
+          
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1078.8912998751964!2d36.54547980792745!3d-3.3816495942750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x553f0eb2b17214f!2zM8KwMjInNTIuNyJTIDM2wrAzMic0Mi40IkU!5e0!3m2!1sen!2sca!4v1648288237471!5m2!1sen!2sca"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contact-form">
+            <h1>contact us</h1>
+            <form method="POST">
+              <input name="name" type="text" placeholder="name" class="contact-form-txt" />
+              <input name="email" type="text" placeholder="email" class="contact-form-txt" />
+              <textarea name="subject" placeholder="message" class="contact-form-textarea"></textarea>
+              {% csrf_token %}
+              <input type="submit" placeholder="submit" class="contact-form-btn"/>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer data-scene>
+        <div class="container">
+          <div class="footer-inner" data-aos="zoom-out">
+            <div class="col logo-f">
+              <img src="static/images/HOA-Lodge.png" alt="" />
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>links</h3></li>
+                <li><a href="lodge.html">the lodge</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="about.html">about</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>email</h3></li>
+                <li><a href="#">heartofafrica@gmail.com</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>follow us</h3></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright" data-scene>
+        <div
+          class="container"
+          data-aos="zoom-out"
+          data-aos-offset="0"
+          data-aos-delay="500"
+        >
+          <p>&#169; 2022 heart of africa lodge</p>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // const r = rolly({
+      //   view: document.querySelector(".app"),
+      //   native: true,
+      //   // other options
+      // });
+      // r.init();
+
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+  </body>
+</html>

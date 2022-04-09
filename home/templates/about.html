@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/rolly.js@0.2.1/css/style.css"
+    />
+    <title>lodge</title>
+  </head>
+  <body>
+    <main class="app">
+      <header id="header">
+        <nav>
+          <div class="left-menu">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="lodge.html">the lodge</a></li>
+              <li><a href="services.html">services</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <a href="#home"><img src="static/images/HOA-Lodge.png" alt="" /></a>
+          </div>
+          <div class="right-menu">
+            <ul>
+              <li><a href="camping.html">camping</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a class="book" href="#">book now</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section class="about-banner" data-scene>
+        <div class="about-container outer">
+          <div class="text about-txt" data-aos="zoom-out">
+            <h1>about us</h1>
+          </div>
+        </div>
+      </section>
+      <section class="sec1-about" data-scene>
+        <div class="container">
+          <div class="sec1-about-inner">
+            <div class="text text-right" data-aos="zoom-out-up">
+                <h2>Heart of Africa Foundation</h2> </br>
+              <p>
+                Our lodge is affiliated with Heart of Africa Foundation’s Sion
+                Center, which supports orphan girls and women in our community.
+                We offer cultural activities of many kinds, including visiting
+                with the girls and meeting the women in our Creative Community
+                program.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="lodge" class="sec2 left-right-sec" data-scene>
+        <div class="container">
+          <div class="sec2-inner">
+            <div class="text" data-aos="zoom-out-left">
+              <div class="text-inner">
+                <h2>How can you help?</h2>
+                <p>
+                    1.	Just by visiting: By staying at our lodge, you allow us to direct a percentage of our profits to provide for our young girls’ education and empowerment, ensuring they have food, clothing, shelter, school fees, and a home where they are cared for in a loving family environment. 
+                    Buy from our shop: Whether you purchase our signature heart bags or other keepsakes, 100% of the profit goes back to support both the women in our Creative Community Program. This allows them to make an income for their families and the orphan girls in our Sion Center.</br></br>
+                    2.	Donate Direct: Your donation, large or small, makes a huge difference! If you would like to donate directly to Heart of Africa Foundation, you can do so here. 
+                </p>
+                <a href="https://ravesandbox.flutterwave.com/donate/ugdszegrongu" class="btn">Donate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map" id="contact">
+        <h1 class="cont-txt">stay in touch</h1>
+        <div class="contact-in">
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1078.8912998751964!2d36.54547980792745!3d-3.3816495942750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x553f0eb2b17214f!2zM8KwMjInNTIuNyJTIDM2wrAzMic0Mi40IkU!5e0!3m2!1sen!2sca!4v1648288237471!5m2!1sen!2sca"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contact-form">
+            <h1>contact us</h1>
+            <form method="POST">
+              {% csrf_token %}
+              <input name="name" type="text" placeholder="name" class="contact-form-txt" />
+              <input name="email" type="text" placeholder="email" class="contact-form-txt" />
+              <textarea name="subject" placeholder="message" class="contact-form-textarea"></textarea>
+              <input type="submit" placeholder="submit" class="contact-form-btn"/>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer data-scene>
+        <div class="container">
+          <div class="footer-inner" data-aos="zoom-out">
+            <div class="col logo-f">
+              <img src="static/images/HOA-Lodge.png" alt="" />
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>links</h3></li>
+                <li><a href="lodge.html">the lodge</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="about.html">about</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>email</h3></li>
+                <li><a href="#">heartofafrica@gmail.com</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>follow us</h3></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright" data-scene>
+        <div
+          class="container"
+          data-aos="zoom-out"
+          data-aos-offset="0"
+          data-aos-delay="500"
+        >
+          <p>&#169; 2022 heart of africa lodge</p>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // const r = rolly({
+      //   view: document.querySelector(".app"),
+      //   native: true,
+      //   // other options
+      // });
+      // r.init();
+
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+  </body>
+</html>

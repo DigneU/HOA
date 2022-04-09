@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/rolly.js@0.2.1/css/style.css"
+    />
+    <title>camping</title>
+  </head>
+  <body class="camp-body">
+    <main class="app">
+      <header id="header">
+        <nav>
+          <div class="left-menu">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="lodge.html">the lodge</a></li>
+              <li><a href="services.html">services</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <a href="index.html"><img src="static/images/HOA-Lodge.png" alt="" /></a>
+          </div>
+          <div class="right-menu">
+            <ul>
+                <li><a href="camping.html">camping</a></li>
+              <li><a href="about.html">about</a></li>
+             
+              <li><a class="book" href="#">book now</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section class="camp-banner" data-scene>
+        <div class="camp-container outer">
+          <div class="text camp-txt" data-aos="zoom-out">
+            <h1> camping</h1>
+            
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="camp-wrapper">
+          <div class="left-camp">
+            <div class="imgbx">
+            </div>
+          </div>
+          <div class="right">
+            <div class="facs" data-aos="fade-left" >
+              <h1>Camping </h1>
+              <p>
+                Our modern, newly built lodge is unique.</br>
+                 We also offer the budget-minded traveler the opportunity to camp on our property. </br>
+                  We have a level, grassy area where you may set up your gear or rent from us.  
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer data-scene>
+        <div class="container">
+          <div class="footer-inner" data-aos="zoom-out">
+            <div class="col logo-f">
+              <img src="static/images/HOA-Lodge.png" alt="" />
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>links</h3></li>
+                <li><a href="lodge.html">the lodge</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="about.html">about</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>email</h3></li>
+                <li><a href="#">heartofafrica@gmail.com</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><h3>follow us</h3></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright" data-scene>
+        <div
+          class="container"
+          data-aos="zoom-out"
+          data-aos-offset="0"
+          data-aos-delay="500"
+        >
+          <p>&#169; 2022 heart of africa lodge</p>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      // const r = rolly({
+      //   view: document.querySelector(".app"),
+      //   native: true,
+      //   // other options
+      // });
+      // r.init();
+    
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    $('.camp-banner').css("opacity", 1 - $(window).
+    scrollTop() / 700 )
+  })
+});
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    $('.camp-txt').css("opacity", 3 - $(window).
+    scrollTop() / 200 )
+  })
+});
+
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+  $(".camp-banner").css({
+    filter: "blur(" + scroll / 30 + "px)",
+  });
+});
+
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+  </body>
+</html>
