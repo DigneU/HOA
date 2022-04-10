@@ -828,7 +828,7 @@ header ul li a:hover{
   
 }
 /* *************room list******* */
-.box-area{
+ .box-area{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -880,7 +880,7 @@ header ul li a:hover{
 }
 .single-box:nth-child(6) .img-area{
   background-image: url(../images/7.jpg);
-}
+} 
 .header-text{
   font-size: 24px;
   font-weight: 500;
@@ -1067,6 +1067,134 @@ header ul li a:hover{
 .booking-form .submit-btn:focus {
   opacity: 0.9
 }
+/* ************checkout********** */
+
+
+.form {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.336);
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.form-container {
+  position: relative;
+  background: #eee;
+  padding-right: 5.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  padding-left: 2em;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.send{
+  width: 120%;
+  margin: 0 auto;
+}
+.modal-close {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  font-weight: border;
+  color: white;
+  background: #664e01;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+
+  cursor: pointer;
+}
+.modal-close svg {
+  margin-top: 0.5em;
+}
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.form1 {
+  width: 120%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.form1 input {
+  width: 100%;
+  height: 100%;
+  color: #161101cc;
+  padding-top: 20px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.form1 label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #000;
+}
+
+.form1 label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #664e01;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.content-name {
+  position: absolute;
+  color: #000;
+  bottom: 5px;
+  text-transform: capitalize;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form1 input:focus + .label-name .content-name,
+.form1 input:valid + .label-name .content-name {
+  transform: translateY(-110%);
+  font-size: 14px;
+  color: #664e01;
+}
+
+.form1 input:focus + .label-name::after,
+.form1 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+.form-container .contact-content {
+  width: 100%;
+  background: #88680010;
+  border-radius: 0;
+}
+
+.form-container .contact-label {
+  color: #664e01;
+  opacity: 0.5;
+}
+
+
+
+
+
 /* ************footer************ */
 
 footer {

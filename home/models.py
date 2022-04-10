@@ -36,11 +36,12 @@ class Booking(models.Model):
     user_phone = models.CharField(max_length=16)
     user_email = models.EmailField()
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    rooms = models.IntegerField(default=1)
     check_in = models.DateTimeField()
     check_out = models.DateTimeField()  
-    adults = models.IntegerField(max_length=2, default=1)
-    children = models.IntegerField(max_length=2, default=0)
-    approved = models. BooleanField(default=False)
+    adults = models.IntegerField(default=1)
+    children = models.IntegerField(default=0)
+    approved = models. BooleanField(default=True)
 
     def __str__(self):
         return f'{self.user_name} has booked {self.room} from {self.check_in} to {self.check_out} {self.approved}'

@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.core.mail import send_mail
 
+app_name = 'home'
 # Create your views here.
 class HomePageView(TemplateView):
     template_name = "index.html"
@@ -71,6 +72,26 @@ def about_create(request):
             return render(request, 'about.html')
     return render(request, 'about.html')
 
+def booking_created(request):
+    if request.method =='POST':
+        if request.POST.get("name") and request.POST.get("email") and request.POST.get("phone") and request.POST.get("roomn") and request.POST.get("rooms") and request.POST.get("adults") and request.POST.get("children") and request.POST.get("checkin") and request.POST.get("checkout"):
+            boo= Booking()
+            boo.user_name = request.POST.get("name")
+            boo.user_email = request.POST.get("email")
+            boo.user_phone = request.POST.get("phone")
+            boo.room = request.POST.get("roomn")
+            boo.rooms = request.POST.get("rooms")
+            boo.adults = request.POST.get("adults")
+            boo.children = request.POST.get("children")
+            boo.check_in = request.POST.get("checkin")
+            boo.check_out = request.POST.get("checkout")
+            boo.save()
+
+            return render(request, 'checkout.html')
+        else:
+            return render(request, 'checkout.html')
+    return render(request, 'checkout.html')
+
 def lodge(request):
     return render(request, 'lodge.html')
 
@@ -83,11 +104,25 @@ def camping(request):
 def about(request):
     return render(request, 'about.html')
 
-def book(request):
-    return render(request, 'book.html')
+def roomlist(request):
+    rooms = Room.objects.all()
+    context={
+        'room':rooms
+    }
+    return render(request, 'room_list.html', context)
+
+def booking(request, nameroom, roomprice):
+    room_category = Room.objects.get(name=nameroom)
+    room_price = Room.objects.get(price=roomprice)
+    context={
+        'roomchecked':room_category,
+        'roomprice':room_price
+    }
+    return render(request, 'checkout.html' , context)
 
 class RoomList(ListView):
     model = Room
 
 class BookingList(ListView):
     model = Booking
+
