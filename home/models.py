@@ -1,3 +1,4 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 import email
 # Create your models here.
@@ -19,3 +20,27 @@ class Contact(models.Model):
     def __str__(self):
         #return self.name
         return f'{self.name} With {self.email} said that: {self.content} '
+
+class Room(models.Model):
+    name = models.CharField(max_length=100)
+    price = models.IntegerField(default=0)
+    description = models.TextField()
+    image = models.ImageField(upload_to='static/images')
+    available = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
+
+class Booking(models.Model):
+    user_name = models.CharField(max_length=100)
+    user_phone = models.CharField(max_length=16)
+    user_email = models.EmailField()
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    check_in = models.DateTimeField()
+    check_out = models.DateTimeField()  
+    adults = models.IntegerField(max_length=2, default=1)
+    children = models.IntegerField(max_length=2, default=0)
+    approved = models. BooleanField(default=False)
+
+    def __str__(self):
+        return f'{self.user_name} has booked {self.room} from {self.check_in} to {self.check_out} {self.approved}'
