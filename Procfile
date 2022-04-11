@@ -1,1 +1,1 @@
-web: gunicorn HOA.wsgi --log-file
+web: gunicorn HOA.wsgi --log-file -
