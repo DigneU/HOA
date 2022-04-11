@@ -92,7 +92,7 @@ def booking_create(request):
         insert.save()
         #messages.success(request, f"{message.uname} Your Message sent")
         subjec ='Room Booking at Heart Of Africa Lodge'
-        messag = 'Thank you for booking at Heart of Africa Lodge.'
+        messag = 'Thank you for booking with Heart of Africa Lodge. To cancel the booking please contact us via email or our phone number. We welcome you to the Heart of Africa Lodge'
         from_emai = settings.EMAIL_HOST_USER
         to_emai = user_email
 
