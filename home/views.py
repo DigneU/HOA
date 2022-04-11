@@ -87,7 +87,7 @@ def booking_created(request):
             boo.check_out = request.POST.get("checkout")
             boo.save()
 
-            return render(request, 'checkout.html')
+            return render(request, 'room_list.html')
         else:
             return render(request, 'checkout.html')
     return render(request, 'checkout.html')
