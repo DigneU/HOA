@@ -1,4 +1,5 @@
 import email
+from email import message
 from multiprocessing import context
 from pyexpat import model
 from re import template
@@ -72,25 +73,26 @@ def about_create(request):
             return render(request, 'about.html')
     return render(request, 'about.html')
 
-def booking_created(request):
+def booking_create(request):
     if request.method =='POST':
-        if request.POST.get("name") and request.POST.get("email") and request.POST.get("phone") and request.POST.get("roomn") and request.POST.get("rooms") and request.POST.get("adults") and request.POST.get("children") and request.POST.get("checkin") and request.POST.get("checkout"):
-            boo= Booking()
-            boo.user_name = request.POST.get("name")
-            boo.user_email = request.POST.get("email")
-            boo.user_phone = request.POST.get("phone")
-            boo.room = request.POST.get("roomn")
-            boo.rooms = request.POST.get("rooms")
-            boo.adults = request.POST.get("adults")
-            boo.children = request.POST.get("children")
-            boo.check_in = request.POST.get("checkin")
-            boo.check_out = request.POST.get("checkout")
-            boo.save()
-
-            return render(request, 'room_list.html')
-        else:
-            return render(request, 'checkout.html')
-    return render(request, 'checkout.html')
+        
+        user_name = request.POST["name"]
+        user_email = request.POST["email"]
+        user_phone = request.POST["phone"]
+        room = request.POST["roomn"]
+        rooms = request.POST["rooms"]
+        adults = request.POST["adults"]
+        children = request.POST["children"]
+        check_in = request.POST["checkin"]
+        check_out = request.POST["checkout"]
+        # selecting room instance
+        roomid= Room.objects.get(id=room)
+        insert = Booking(user_name=user_name, user_email=user_email, user_phone=user_phone, room=roomid, rooms=rooms, adults=adults, children=children, check_in=check_in, check_out=check_out)
+        insert.save()
+        #messages.success(request, f"{message.uname} Your Message sent")
+        return render( request, 'index.html')
+        
+    return render(request, 'room_list.html')
 
 def lodge(request):
     return render(request, 'lodge.html')

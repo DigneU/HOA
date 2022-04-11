@@ -1,243 +1,69 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/rolly.js@0.2.1/css/style.css" />
-    <title>lodge</title>
-  </head>
-  <body>
-  
-    <main class="app">
-        <header id="header">
-          <nav>
-            <div class="left-menu">
-              <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="lodge.html">the lodge</a></li>
-                <li><a href="services.html">services</a></li>
-              </ul>
-            </div>
-            <div class="logo">
-              <a href="index.html"><img src="static/images/HOA-Lodge.png" alt="" /></a>
-            </div>
-            <div class="right-menu">
-              <ul>
-                <li><a href="camping.html">camping</a></li>
-                <li><a href="about.html">about</a></li>
-                
-                <li><a class="book" href="#">book now</a></li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-
-        <section class="about-banner" data-scene>
-            <div class="about-container outer">
-              <div class="text about-txt" data-aos="zoom-out">
-                <h1>Book Now</h1>
-              </div>
-            </div>
-          </section>
-
-        <section>
-           <div class="box-area">
-            {% for roomd in room %}
-               <div class="single-box">
-                   <div class="img-area"></div>
-                   <div class="img-text">
-                       <span class="header-text"><strong>{{roomd.name}}</strong></span>
-                       <p>{{roomd.description}}
-                        </p>
-                        <br>
-                        <p><strong>Price:{{roomd.price}} $/per 1 night</strong></p>
-                        <a class="btn modal">book now</a>
-                      </div>
-                      <!--Booking Modal form -->
-                      <form action="" method="POST" class="form">
-                        <div class="form-container">
-                          <div class="modal-close">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255); transform: msfilter">
-                            <path
-                              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3 style="color: black;">{{roomd.name}} Booking</h3>
-                        <div class="form1">
-                          <input type="text" name="name"class="input" autocomplete="off" required/>
-                          <label for="name" class="label-name">
-                          <span class="content-name">name</span>
-                          </label>
-                        </div>
-                          <div class="form1">
-                            <input type="email" name="email" class="input" autocomplete="off" required/>
-                            <label for="email" class="label-name">
-                            <span class="content-name">email</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="text" name="phone" class="input" autocomplete="off" required/>
-                            <label for="phone" class="label-name">
-                            <span class="content-name">phone</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="text" name="roomn" value="{{roomd.name}}" class="input" autocomplete="off" readonly/>
-                            <label for="roomn" class="label-name">
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="number" name="rooms"class="input" autocomplete="off" required/>
-                            <label for="rooms" class="label-name">
-                            <span class="content-name">rooms</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="number" name="adults"class="input" autocomplete="off" required/>
-                            <label for="adults" class="label-name">
-                            <span class="content-name">adults</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="number" name="children"class="input" autocomplete="off" required/>
-                            <label for="children" class="label-name">
-                            <span class="content-name">children</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="text" name="checkin" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
-                            <label for="checkin" class="label-name">
-                            <span class="content-name">checkin</span>
-                            </label>
-                          </div>
-                          <div class="form1">
-                            <input type="text" name="checkout" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
-                            <label for="checkout" class="label-name">
-                            <span class="content-name">checkout</span>
-                            </label>
-                          </div>
-                          {% csrf_token %}
-                          <div class="send">
-                            <a type="submit" class="btn"> book </a>
-                          </div>
-                        </div>
-                      </form>
-               </div>
-               {% endfor %}
-              
-           </div>
-        </section>
-        <footer data-scene>
-          <div class="container">
-            <div class="footer-inner" data-aos="zoom-out">
-              <div class="col logo-f">
-                <img src="static/images/HOA-Lodge.png" alt="" />
-              </div>
-              <div class="col">
-                <ul>
-                  <li><h3>links</h3></li>
-                  <li><a href="lodge.html">the lodge</a></li>
-                  <li><a href="services.html">services</a></li>
-                  <li><a href="about.html">about</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <ul>
-                  <li><h3>email</h3></li>
-                  <li>info@heartofafricalodge.com</li>
-                  <li>Plot no. 175, Off Ryan Road towards<br>Engorora<br>Kisongo, Arusha<br>Tanzania</li>
-                  <li>+255 687 505 522<br>+1503 544 3608</li>
-                </ul>
-              </div>
-              <div class="col">
-                <ul>
-                  <li><h3>follow us</h3></li>
-                  <li><a href="#">instagram</a></li>
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">twitter</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <div class="copyright" data-scene>
-          <div
-            class="container"
-            data-aos="zoom-out"
-            data-aos-offset="0"
-            data-aos-delay="500"
-          >
-            <p>&#169; 2022 heart of africa lodge</p>
-          </div>
-        </div>
-          
-    </main>
-<script src="{% static 'js/app.js' %}"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script> -->
-<script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script>
-  // const r = rolly({
-  //   view: document.querySelector(".app"),
-  //   native: true,
-  //   // other options
-  // });
-  // r.init();
-
-
-$(document).ready(function(){
-$(window).scroll(function(){
-$('.lodge-banner').css("opacity", 1 - $(window).
-scrollTop() / 700 )
-})
-});
-
-$(document).ready(function(){
-$(window).scroll(function(){
-$('.lodge-txt').css("opacity", 3 - $(window).
-scrollTop() / 200 )
-})
-});
-
-$(window).scroll(function () {
-var scroll = $(window).scrollTop();
-$(".lodge-banner").css({
-filter: "blur(" + scroll / 30 + "px)",
-});
-});
-
-  AOS.init({
-    duration: 1500,
-  });
-</script>
-<script>
-  const modalViews = document.querySelectorAll(".form"),
-  modalBtns = document.querySelectorAll(".modal"),
-  modalCloses = document.querySelectorAll(".modal-close");
-
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
-
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener("click", () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal");
-    });
-  });
-});
-</script>
-</body>
-</html>
+<form action="" method="POST" class="form">
+  <div class="form-container">
+    <div class="modal-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255); transform: msfilter">
+      <path
+        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+      ></path>
+    </svg>
+  </div>
+  <h3 style="color: black;">{{roomd.name}} Booking</h3>
+  <div class="form1">
+    <input type="text" name="name"class="input" autocomplete="off" required/>
+    <label for="name" class="label-name">
+    <span class="content-name">name</span>
+    </label>
+  </div>
+    <div class="form1">
+      <input type="email" name="email" class="input" autocomplete="off" required/>
+      <label for="email" class="label-name">
+      <span class="content-name">email</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="text" name="phone" class="input" autocomplete="off" required/>
+      <label for="phone" class="label-name">
+      <span class="content-name">phone</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="text" name="roomn" value="{{roomd.name}}" class="input" autocomplete="off"/>
+      <label for="roomn" class="label-name">
+      </label>
+    </div>
+    <div class="form1">
+      <input type="number" name="rooms"class="input" autocomplete="off" required/>
+      <label for="rooms" class="label-name">
+      <span class="content-name">rooms</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="number" name="adults"class="input" autocomplete="off" required/>
+      <label for="adults" class="label-name">
+      <span class="content-name">adults</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="number" name="children"class="input" autocomplete="off" required/>
+      <label for="children" class="label-name">
+      <span class="content-name">children</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="text" name="checkin" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
+      <label for="checkin" class="label-name">
+      <span class="content-name">checkin</span>
+      </label>
+    </div>
+    <div class="form1">
+      <input type="text" name="checkout" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
+      <label for="checkout" class="label-name">
+      <span class="content-name">checkout</span>
+      </label>
+    </div>
+    {% csrf_token %}
+    <div class="send">
+      <a type="submit" href="" class="btn"> book </a>
+    </div>
+  </div>
+</form>

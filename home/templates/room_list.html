@@ -55,10 +55,11 @@
                         </p>
                         <br>
                         <p><strong>Price:{{roomd.price}} $/per 1 night</strong></p>
-                        <a class="btn modal" href="">book now</a>
+                        <a class="btn modal">book now</a>
                       </div>
                       <!--Booking Modal form -->
-                      <form action="" method="POST" class="form">
+                      <form action="room_booking" method="POST" class="form">
+                        {% csrf_token %}
                         <div class="form-container">
                           <div class="modal-close">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255); transform: msfilter">
@@ -69,7 +70,7 @@
                         </div>
                         <h3 style="color: black;">{{roomd.name}} Booking</h3>
                         <div class="form1">
-                          <input type="text" name="name"class="input" autocomplete="off" required/>
+                          <input type="text" name="name" class="input" autocomplete="off" required/>
                           <label for="name" class="label-name">
                           <span class="content-name">name</span>
                           </label>
@@ -87,18 +88,18 @@
                             </label>
                           </div>
                           <div class="form1">
-                            <input type="text" name="roomn" value="{{roomd.name}}" class="input" autocomplete="off"/>
+                            <input type="text" name="roomn" value="{{roomd.id}}" class="input" autocomplete="off" readonly/>
                             <label for="roomn" class="label-name">
                             </label>
                           </div>
                           <div class="form1">
-                            <input type="number" name="rooms"class="input" autocomplete="off" required/>
+                            <input type="number" name="rooms" class="input" autocomplete="off" required/>
                             <label for="rooms" class="label-name">
                             <span class="content-name">rooms</span>
                             </label>
                           </div>
                           <div class="form1">
-                            <input type="number" name="adults"class="input" autocomplete="off" required/>
+                            <input type="number" name="adults" class="input" autocomplete="off" required/>
                             <label for="adults" class="label-name">
                             <span class="content-name">adults</span>
                             </label>
@@ -121,10 +122,11 @@
                             <span class="content-name">checkout</span>
                             </label>
                           </div>
-                          {% csrf_token %}
+                          
                           <div class="send">
-                            <a type="submit" class="btn"> book </a>
+                            <button type="submit" class="btn"> book </button>
                           </div>
+                          
                         </div>
                       </form>
                </div>

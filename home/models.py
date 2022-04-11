@@ -1,3 +1,7 @@
+from email.policy import default
+from unicodedata import name
+from django.utils import timezone
+from django.utils.timezone import now
 from unittest.util import _MAX_LENGTH
 from django.db import models
 import email
@@ -23,7 +27,7 @@ class Contact(models.Model):
 
 class Room(models.Model):
     name = models.CharField(max_length=100)
-    price = models.IntegerField(default=0)
+    price = models.FloatField(default=0)
     description = models.TextField()
     image = models.ImageField(upload_to='static/images')
     available = models.BooleanField(default=True)
@@ -35,13 +39,14 @@ class Booking(models.Model):
     user_name = models.CharField(max_length=100)
     user_phone = models.CharField(max_length=16)
     user_email = models.EmailField()
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    rooms = models.IntegerField(default=1)
-    check_in = models.DateTimeField()
-    check_out = models.DateTimeField()  
-    adults = models.IntegerField(default=1)
-    children = models.IntegerField(default=0)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE,null=True)
+    rooms = models.CharField(max_length=2, default=1)
+    check_in = models.CharField(max_length=100)
+    check_out = models.CharField(max_length=100)  
+    adults = models.CharField(max_length=2, default=1)
+    children = models.CharField(max_length=2, default=0)
     approved = models. BooleanField(default=True)
+    created_on = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f'{self.user_name} has booked {self.room} from {self.check_in} to {self.check_out} {self.approved}'
+        return self.user_name
