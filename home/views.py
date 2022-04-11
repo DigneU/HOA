@@ -9,6 +9,7 @@ from .models import Page, Contact, Room, Booking
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.conf import settings
 
 app_name = 'home'
 # Create your views here.
@@ -90,6 +91,12 @@ def booking_create(request):
         insert = Booking(user_name=user_name, user_email=user_email, user_phone=user_phone, room=roomid, rooms=rooms, adults=adults, children=children, check_in=check_in, check_out=check_out)
         insert.save()
         #messages.success(request, f"{message.uname} Your Message sent")
+        subjec ='Room Booking at Heart Of Africa Lodge'
+        messag = 'Thank you for booking at Heart of Africa Lodge.'
+        from_emai = settings.EMAIL_HOST_USER
+        to_emai = user_email
+
+        send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=[str(to_emai)],fail_silently=False)
         return render( request, 'index.html')
         
     return render(request, 'room_list.html')

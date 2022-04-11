@@ -129,10 +129,10 @@ STATIC_ROOT = os.path.join(BASE_DIR,"static")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'umwalidigne@gmail.com'
-EMAIL_HOST_PASSWORD ='0728802489'
+EMAIL_HOST_PASSWORD ='rxmsbhyhwqbxokun'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # SERVER_EMAIL='infos@idatech.rw'
