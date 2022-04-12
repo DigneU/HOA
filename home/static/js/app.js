@@ -1,3 +1,23 @@
+/*showing the menu */
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+
+
+
 // background header sticky
 
 function scrollHeader() {
@@ -11,6 +31,16 @@ window.addEventListener("scroll", scrollHeader);
 // SMOOTH SCROLL
 
 // EFFECTS
+
+//scroll uppppppppp staffff
+
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+
+  if (this.scrollY >= 200) scrollUp.classList.add("show-scroll");
+  else scrollUp.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollUp);
 
 
 // modal viewwwwwwwwwwwwwwwwwwwwwwwwwwwww//////////////
