@@ -111,13 +111,13 @@
                             </label>
                           </div>
                           <div class="form1">
-                            <input type="text" name="checkin" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
+                            <input type="text" name="checkin" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" id="from" autocomplete="off" required/>
                             <label for="checkin" class="label-name">
                             <span class="content-name">checkin</span>
                             </label>
                           </div>
                           <div class="form1">
-                            <input type="text" name="checkout" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="input" autocomplete="off" required/>
+                            <input type="text" name="checkout" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" id="to" class="input" autocomplete="off" required/>
                             <label for="checkout" class="label-name">
                             <span class="content-name">checkout</span>
                             </label>
@@ -180,10 +180,12 @@
           
     </main>
 <script src="{% static 'js/app.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script> -->
 <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script>
   // const r = rolly({
   //   view: document.querySelector(".app"),
@@ -191,8 +193,6 @@
   //   // other options
   // });
   // r.init();
-
-
 $(document).ready(function(){
 $(window).scroll(function(){
 $('.lodge-banner').css("opacity", 1 - $(window).
@@ -219,6 +219,9 @@ filter: "blur(" + scroll / 30 + "px)",
   });
 </script>
 <script>
+
+</script>
+<script>
   const modalViews = document.querySelectorAll(".form"),
   modalBtns = document.querySelectorAll(".modal"),
   modalCloses = document.querySelectorAll(".modal-close");
@@ -240,6 +243,7 @@ modalCloses.forEach((modalClose) => {
     });
   });
 });
+
 </script>
 </body>
 </html>
