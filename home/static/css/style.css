@@ -56,7 +56,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
-  /* z-index: 100000; */
+  z-index: 100000;
 }
 
 header ul {
@@ -96,23 +96,23 @@ header ul li a:hover{
 .sticky .book {
   color: #b62427;
   padding: 10px 0;
-  border-top: solid 1px#4b3407;
-  border-bottom: solid 1px#4b3407;
+  border-top: solid 1px #4b3407;
+  border-bottom: solid 1px #4b3407;
 }
 .sticky .book:hover{
   color: #4b3407;
-  border-top: solid 1px#b62427;
-  border-bottom: solid 1px#b62427;
+  border-top: solid 1px #b62427;
+  border-bottom: solid 1px #b62427;
 }
 .book {
   color: #b62427;
   padding: 10px 0;
-  border-top: solid 1px#fff;
+  border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
 .book:hover{
-  border-top: solid 1px#4b3407;
-  border-bottom: solid 1px#4b3407;
+  border-top: solid 1px #4b3407;
+  border-bottom: solid 1px #4b3407;
 }
 .banner {
   height: 100vh;
@@ -987,26 +987,26 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   width: 300px;
-  height: auto;
+  height: 80vh;
   border-radius: 4px;
   background-color: rgb(78, 79, 53);
   text-align: center;
   margin: 20px;
-  padding: 20px;
+  padding: 60px 10px ;
   transition: .3s;
 }
 .img-area{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  /* width: 80px;
+  height: 80px; */
   border: 6px solid #ddd;
   border-radius: 50%;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 40px;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -1036,7 +1036,7 @@ video {
 }
 .img-text{
   font-family:Poppins;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 .img-text p{
   font-size: 15px;

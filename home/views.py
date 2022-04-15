@@ -51,11 +51,12 @@ def contact_create(request):
             cont.save()
             #messages.success(request, f"{message.uname} Your Message sent")
             subjec ='Comments or Inquires'
-            messag = cont.content
+            messag = f'{cont.name} said: '
+            messag += cont.content
             from_emai = cont.email
-            to_emai = settings.EMAIL_HOST_USER
+            to_emai = [settings.EMAIL_HOST_USER, 'director@heartofafricalodge.com','ephata@heartofafricalodge.com','jackson@heartofafricalodge.com']
 
-            send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=[str(to_emai)],fail_silently=False)
+            send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=to_emai,fail_silently=False)
             return render(request, 'index.html')
             
         else:
@@ -73,7 +74,14 @@ def about_create(request):
             cont.email = request.POST.get("email") 
             cont.content = request.POST.get("subject") 
             cont.save()
-            #messages.success(request, 'Message successfully sent.')
+           #messages.success(request, f"{message.uname} Your Message sent")
+            subjec ='Comments or Inquires'
+            messag = f'{cont.name} said: '
+            messag += cont.content
+            from_emai = cont.email
+            to_emai = [settings.EMAIL_HOST_USER, 'director@heartofafricalodge.com','ephata@heartofafricalodge.com','jackson@heartofafricalodge.com']
+
+            send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=to_emai,fail_silently=False)
             return render(request, 'about.html')       
         else:
             return render(request, 'about.html')
@@ -97,19 +105,20 @@ def booking_create(request):
         insert.save()
         #messages.success(request, f"{message.uname} Your Message sent")
         subjec ='Room Booking at Heart Of Africa Lodge'
-        #msg1 = 'Thank you for booking with Heart of Africa Lodge. You have booked '
-        #msg2= [str(roomid)]
-        #msg3= 'from'
-        #msg4= [str(check_in)]
-        #msg5= 'to '
-        #msg6= [str(check_out)]
-        #msg7= '. To cancel the booking please do not hesitate to contact us via email or our phone number.'
-        #messag= msg1 , msg2, msg3, msg4, msg5, msg6, msg7
-        messag = 'Thank you for booking with Heart of Africa Lodge. To cancel the booking please contact us via email or our phone number. We welcome you to the Heart of Africa Lodge'
+        messag = f'Thank you for booking with Heart of Africa Lodge.'
+        messag += f'\nYou have booked {roomid} from {check_in} to {check_out}'
+        messag += f'\nTo cancel the booking please contact us via email or our phone number.\n We welcome you to the Heart of Africa Lodge.\n Karibuni Wote'
         from_emai = settings.EMAIL_HOST_USER
         to_emai = user_email
-
+        
+        # message for the lodge about booking made
+        # message2= ( 'New Booking Done',
+        # f'{user_name} booked {roomid} for {adults} and {children}\nFrom {check_in} To {check_out}',
+        # user_email,
+        # ['leanne@heartofafricalodge.com','jackson@heartofafricalodge.com','ephata@heartofafricalodge.com']
+        # )
         send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=[str(to_emai)],fail_silently=False)
+        # send_mail(message2,fail_silently=False)
         messages.success(request, 'Booking request submitted successfully.')
         return render( request, 'index.html')
         

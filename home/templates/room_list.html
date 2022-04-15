@@ -13,6 +13,7 @@
   <body>
   
     <main class="app">
+      {% include 'messages.html' %}
       <header id="header">
         <nav>
           <div class="left-menu" id="nav-menu">
@@ -69,7 +70,7 @@
 
         <section class="about-banner" data-scene>
             <div class="about-container outer">
-              <div class="text about-txt" data-aos="zoom-out">
+              <div class="text about-txt" data-ao="zoom-out">
                 <h1>Book Now</h1>
               </div>
             </div>
@@ -86,8 +87,9 @@
                         </p>
                         <br>
                         <p><strong>Price:{{roomd.price}} $/per 1 night</strong></p>
-                        <a class="btn modal">book now</a>
+                        
                       </div>
+                      <a class="btn modal">book now</a>
                       <!--Booking Modal form -->
                       <form action="room_booking" method="POST" class="form">
                         {% csrf_token %}
@@ -185,7 +187,7 @@
         <! ================================== FOOTER ==================================================== >
         <footer data-scene>
           <div class="container">
-            <div class="footer-inner" data-aos="zoom-out">
+            <div class="footer-inner" data-ao="zoom-out">
               <div class="col logo-f">
                 <img src="static/images/HOA-Lodge.png" alt="" />
               </div>
@@ -219,9 +221,9 @@
         <div class="copyright" data-scene>
           <div
             class="container"
-            data-aos="zoom-out"
-            data-aos-offset="0"
-            data-aos-delay="500"
+            data-ao="zoom-out"
+            data-ao-offset="0"
+            data-ao-delay="500"
           >
             <p>&#169; 2022 heart of africa lodge</p>
           </div>
