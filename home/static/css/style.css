@@ -768,11 +768,12 @@ header ul li a:hover{
 /* ************CAMPING************ */
 
 .camp-wrapper{
+  position: relative;
   display: flex;
   width: 100%;
   height: 83.5vh;
   background: #2d3014;
-  z-index: 100000;
+  z-index: 0;
 }
 
 .camp-txt h1{
@@ -838,6 +839,7 @@ header ul li a:hover{
 .camp-container {
   position: relative;
   width: 100%;
+  background: #2d3014de;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -957,6 +959,11 @@ header ul li a:hover{
   font-weight: 700;
   font-size: 36px;
   text-transform: capitalize;
+}
+
+#video{
+  background:#2d3014b4;
+  padding-bottom: 2em;
 }
 .vid {
   background: linear-gradient(rgba(28, 44, 1, 0.808), rgba(62, 66, 3, 0.822)),
