@@ -21,29 +21,61 @@
       {% include 'messages.html' %}
       <header id="header">
         <nav>
-          <div class="left-menu">
+          <div class="left-menu" id="nav-menu">
+            <div class="nav-close" id="nav-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path
+                  d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                ></path>
+              </svg>
+            </div>
             <ul>
               <li><a href="index.html">home</a></li>
               <li><a href="lodge.html">the lodge</a></li>
               <li><a href="services.html">services</a></li>
+              <div class="dismiss">
+                <li><a href="camping.html">camping</a></li>
+              <li><a  href="about.html">about</a></li>             
+              <li><a class="book" href="room_list.html">book now</a></li>
+              </div>
             </ul>
           </div>
           <div class="logo">
-            <a href="#home"><img src="static/images/HOA-Lodge.png" alt="" /></a>
+            <a href="index.html"><img src="static/images/HOA-Lodge.png" alt="" /></a>
           </div>
-          <div class="right-menu">
+          <div class="right-menu" id="nav-menu">
             <ul>
               <li><a href="camping.html">camping</a></li>
               <li><a href="about.html">about</a></li>             
               <li><a class="book" href="room_list.html">book now</a></li>
             </ul>
           </div>
+
+          
+          <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-toggle" id="nav-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
+              </svg>
+          </div>
         </nav>
       </header>
-      
+
       <section id="home" class="banner" data-scene>
         <div class="container outer">
-          <div class="text" data-aos="zoom-out">
+          <div class="text" data-ao="zoom-out">
             <h1>Welcome to </br>Heart of Africa Lodge </br><span>(Karibuni wote)</span></h1>
             <p>
               The wildebeest migration, is one of the “Seven New Wonders of the
@@ -57,13 +89,13 @@
       <section class="sec1" data-scene>
         <div class="container">
           <div class="sec1-inner">
-            <div class="text text-left" data-aos="zoom-out-right">
+            <div class="text text-left" data-ao="zoom-out-right">
               <h3>
                 Heart of Africa Lodge is an exquisitely beautiful
                  escape offering guests a full-service vacation package. 
               </h3>
             </div>
-            <div class="text text-right" data-aos="zoom-out-left">
+            <div class="text text-right" data-ao="zoom-out-left">
               <p>
                 We are located in Arusha, a short five-minute drive to the only road leading to Tanzania’s incredible national
                  parks in the Northern Safari Circuit.
@@ -78,11 +110,11 @@
         <div class="container">
           <div class="sec2-inner">
             <div class="img">
-              <div class="img" data-aos="zoom-out-up">
+              <div class="img" data-ao="zoom-out-up">
                 <img src="static/images/3.jpg" alt="" />
               </div>
             </div>
-            <div class="text" data-aos="zoom-out-left">
+            <div class="text" data-ao="zoom-out-left">
               <div class="text-inner">
                 <h2>the lodges.</h2>
                 <p>
@@ -106,7 +138,7 @@
       <section id="lodge" class="sec3 left-right-sec" data-scene>
         <div class="container">
           <div class="sec3-inner">
-            <div class="text" data-aos="zoom-out-right">
+            <div class="text" data-ao="zoom-out-right">
               <div class="text-inner">
                 <h2>camping.</h2>
                 <p>
@@ -118,7 +150,7 @@
               </div>
             </div>
             <div class="img">
-              <div class="img" data-aos="zoom-out-up">
+              <div class="img" data-ao="zoom-out-up">
                 <img src="static/images/30.jpg" alt="" />
               </div>
             </div>
@@ -127,9 +159,9 @@
       </section>
 
       <section class="map" id="contact">
-        <!-- message sending -->
         <h1 class="cont-txt">stay in touch</h1>
         <div class="contact-in">
+          
           <div class="contact-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1078.8912998751964!2d36.54547980792745!3d-3.3816495942750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x553f0eb2b17214f!2zM8KwMjInNTIuNyJTIDM2wrAzMic0Mi40IkU!5e0!3m2!1sen!2sca!4v1648288237471!5m2!1sen!2sca"
@@ -153,9 +185,28 @@
           </div>
         </div>
       </section>
+
+
+      <! ================================== SCROLL-UP ==================================================== >
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: rgba(255, 255, 255, 1); transform: msfilter"
+      >
+        <path
+          d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"
+        ></path>
+      </svg>
+    </a>
+    <! ================================== FOOTER ==================================================== >
+
       <footer data-scene>
         <div class="container">
-          <div class="footer-inner" data-aos="zoom-out">
+          <div class="footer-inner" data-ao="zoom-out">
             <div class="col logo-f">
               <img src="static/images/HOA-Lodge.png" alt="" />
             </div>
@@ -189,9 +240,9 @@
       <div class="copyright" data-scene>
         <div
           class="container"
-          data-aos="zoom-out"
-          data-aos-offset="0"
-          data-aos-delay="500"
+          data-ao="zoom-out"
+          data-ao-offset="0"
+          data-ao-delay="500"
         >
           <p>&#169; 2022 heart of africa lodge</p>
         </div>

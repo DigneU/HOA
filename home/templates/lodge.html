@@ -20,30 +20,61 @@
     <main class="app">
       <header id="header">
         <nav>
-          <div class="left-menu">
+          <div class="left-menu" id="nav-menu">
+            <div class="nav-close" id="nav-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path
+                  d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                ></path>
+              </svg>
+            </div>
             <ul>
               <li><a href="index.html">home</a></li>
               <li><a href="lodge.html">the lodge</a></li>
               <li><a href="services.html">services</a></li>
+              <div class="dismiss">
+                <li><a href="camping.html">camping</a></li>
+              <li><a  href="about.html">about</a></li>             
+              <li><a class="book" href="room_list.html">book now</a></li>
+              </div>
             </ul>
           </div>
           <div class="logo">
             <a href="index.html"><img src="static/images/HOA-Lodge.png" alt="" /></a>
           </div>
-          <div class="right-menu">
+          <div class="right-menu" id="nav-menu">
             <ul>
               <li><a href="camping.html">camping</a></li>
-              <li><a href="about.html">about</a></li>
-              
+              <li><a href="about.html">about</a></li>             
               <li><a class="book" href="room_list.html">book now</a></li>
             </ul>
+          </div>
+
+          
+          <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-toggle" id="nav-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
+              </svg>
           </div>
         </nav>
       </header>
 
       <section class="lodge-banner" data-scene>
         <div class="lodge-container outer">
-          <div class="text lodge-txt" data-aos="zoom-out">
+          <div class="text lodge-txt" data-ao="zoom-out">
             <h1>the </br>lodge</h1>
             
           </div>
@@ -57,7 +88,7 @@
             </div>
           </div>
           <div class="right">
-            <div class="facs" data-aos="fade-left">
+            <div class="facs" data-ao="fade-left">
               <h1>our rooms</h1>
               <p>
                 We offer single rooms, double rooms, triple rooms, and family rooms. Our rooms include: 
@@ -124,7 +155,7 @@
             </div>
           </div>
           <div class="right">
-            <div class="facs" data-aos="fade-right" >
+            <div class="facs" data-ao="fade-right" >
               <h1>standard double</h1>
               <p>
                 standard double rooms prices are:
@@ -151,7 +182,7 @@
             </div>
           </div>
           <div class="right">
-            <div class="facs" data-aos="fade-left" >
+            <div class="facs" data-ao="fade-left" >
               <h1>Deluxe Double</h1>
               <p>
                 Deluxe Double rooms prices are:
@@ -179,7 +210,7 @@
             </div>
           </div>
           <div class="right">
-            <div class="facs" data-aos="fade-right" >
+            <div class="facs" data-ao="fade-right" >
               <h1>Family/Quad</h1>
               <p>
                 Family/Quad rooms prices are:
@@ -198,10 +229,29 @@
           </div>
         </div>
       </section>
+
+      <! ================================== SCROLL-UP ==================================================== >
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: rgba(255, 255, 255, 1); transform: msfilter"
+      >
+        <path
+          d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"
+        ></path>
+      </svg>
+    </a>
+
+
+    <! ================================== FOOTER ==================================================== >
       
       <footer data-scene>
         <div class="container">
-          <div class="footer-inner" data-aos="zoom-out">
+          <div class="footer-inner" data-ao="zoom-out">
             <div class="col logo-f">
               <img src="static/images/HOA-Lodge.png" alt="" />
             </div>
@@ -235,9 +285,9 @@
       <div class="copyright" data-scene>
         <div
           class="container"
-          data-aos="zoom-out"
-          data-aos-offset="0"
-          data-aos-delay="500"
+          data-ao="zoom-out"
+          data-ao-offset="0"
+          data-ao-delay="500"
         >
           <p>&#169; 2022 heart of africa lodge</p>
         </div>

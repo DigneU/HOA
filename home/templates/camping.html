@@ -4,8 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'fonts.css' %}" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -20,30 +22,61 @@
     <main class="app">
       <header id="header">
         <nav>
-          <div class="left-menu">
+          <div class="left-menu" id="nav-menu">
+            <div class="nav-close" id="nav-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path
+                  d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                ></path>
+              </svg>
+            </div>
             <ul>
               <li><a href="index.html">home</a></li>
               <li><a href="lodge.html">the lodge</a></li>
               <li><a href="services.html">services</a></li>
+              <div class="dismiss">
+                <li><a href="camping.html">camping</a></li>
+              <li><a  href="about.html">about</a></li>             
+              <li><a class="book" href="room_list.html">book now</a></li>
+              </div>
             </ul>
           </div>
           <div class="logo">
             <a href="index.html"><img src="static/images/HOA-Lodge.png" alt="" /></a>
           </div>
-          <div class="right-menu">
+          <div class="right-menu" id="nav-menu">
             <ul>
-                <li><a href="camping.html">camping</a></li>
-              <li><a href="about.html">about</a></li>
-             
+              <li><a href="camping.html">camping</a></li>
+              <li><a href="about.html">about</a></li>             
               <li><a class="book" href="room_list.html">book now</a></li>
             </ul>
+          </div>
+
+          
+          <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-toggle" id="nav-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: msfilter"
+              >
+                <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
+              </svg>
           </div>
         </nav>
       </header>
 
       <section class="camp-banner" data-scene>
         <div class="camp-container outer">
-          <div class="text camp-txt" data-aos="zoom-out">
+          <div class="text camp-txt" data-ao="zoom-out">
             <h1> camping</h1>
             
           </div>
@@ -57,8 +90,8 @@
             </div>
           </div>
           <div class="right">
-            <div class="facs" data-aos="fade-left" >
-              <h1>Camping </h1>
+            <div class="facs" data-ao="fade-left" >
+              <h1>Camping ground</h1>
               <p>
                 Our modern, newly built lodge is unique.</br>
                  We also offer the budget-minded traveler the opportunity to camp on our property. </br>
@@ -69,10 +102,79 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="camp-container">
+          <h1 class="camping-txt">camping events</h1>
+          <div class="image-gallery">
+            <a href="static/images/camping/img-1.jpg" class="img-1">
+                <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-2.jpg" class="img-2">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-3.jpg" class="img-3">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-4.jpg" class="img-4">
+              <i class="icon ion-md-expand"></i>
+            </a>  
+            <a href="static/images/camping/img-5.jpg" class="img-5">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-6.jpg" class="img-6">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-7.jpg" class="img-7">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-8.jpg" class="img-8">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-9.jpg" class="img-9">
+              <i class="icon ion-md-expand"></i>
+            </a>
+            <a href="static/images/camping/img-10.jpg" class="img-10">
+              <i class="icon ion-md-expand"></i>
+            </a>
+          </div>
+        </div>
+       </section>
+
+
+      <section>
+       <div class="video">
+         <h1 class="camping-txt">watch the video</h1>
+        <div class="vid">
+          <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+            <source src="static/images/videos/2.mp4" type="video/mp4" />
+          </video>
+        </div>
+       </div>
+      </section>
+
+      <! ================================== SCROLL-UP ==================================================== >
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: rgba(255, 255, 255, 1); transform: msfilter"
+      >
+        <path
+          d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"
+        ></path>
+      </svg>
+    </a>
+
+
+    <! ================================== FOOTER ==================================================== >
       
       <footer data-scene>
         <div class="container">
-          <div class="footer-inner" data-aos="zoom-out">
+          <div class="footer-inner" data-ao="zoom-out">
             <div class="col logo-f">
               <img src="static/images/HOA-Lodge.png" alt="" />
             </div>
@@ -90,7 +192,7 @@
                 <li>info@heartofafricalodge.com</li>
                 <li>Plot no. 175, Off Ryan Road towards<br>Engorora<br>Kisongo, Arusha<br>Tanzania</li>
                 <li>+255 687 505 522<br>+1503 544 3608</li>
-              </ul>
+             </ul>
             </div>
             <div class="col">
               <ul>
@@ -106,9 +208,9 @@
       <div class="copyright" data-scene>
         <div
           class="container"
-          data-aos="zoom-out"
-          data-aos-offset="0"
-          data-aos-delay="500"
+          data-ao="zoom-out"
+          data-ao-offset="0"
+          data-ao-delay="500"
         >
           <p>&#169; 2022 heart of africa lodge</p>
         </div>
@@ -119,6 +221,7 @@
     <script src="https://unpkg.com/rolly.js@0.2.1/dist/rolly.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
     <script>
       // const r = rolly({
       //   view: document.querySelector(".app"),
