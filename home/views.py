@@ -112,13 +112,12 @@ def booking_create(request):
         to_emai = user_email
         
         # message for the lodge about booking made
-        # message2= ( 'New Booking Done',
-        # f'{user_name} booked {roomid} for {adults} and {children}\nFrom {check_in} To {check_out}',
-        # user_email,
-        # ['leanne@heartofafricalodge.com','jackson@heartofafricalodge.com','ephata@heartofafricalodge.com']
-        # )
+        subjec2 =  'New Booking Done'
+        messag2 = f'{user_name} booked {roomid} for {adults} and {children}\nFrom {check_in} To {check_out}'
+        from_use2 = user_email
+        to_rec2 = ['director@heartofafricalodge.com','leanne@heartofafricalodge.com','jackson@heartofafricalodge.com','ephata@heartofafricalodge.com']
         send_mail(subject=subjec,message=messag,from_email=from_emai,recipient_list=[str(to_emai)],fail_silently=False)
-        # send_mail(message2,fail_silently=False)
+        send_mail(subject=subjec2,message=messag2,from_email=from_use2,recipient_list=to_rec2,fail_silently=False)
         messages.success(request, 'Booking request submitted successfully.')
         return render( request, 'index.html')
         
