@@ -127,16 +127,16 @@ header ul li a:hover{
 @keyframes animate {
   0%,
   100% {
-    background-image: url(../images/lodge\ images/6.jpg);
+    background-image: url(../images/lodge\ images/home1.jpg);
   }
   25% {
-    background-image: url(../images/lodge\ images/2.jpg);
+    background-image: url(../images/lodge\ images/home2.jpg);
   }
   50% {
-    background-image: url(../images/lodge\ images/1.jpg);
+    background-image: url(../images/lodge\ images/home3.jpg);
   }
   75% {
-    background-image: url(../images/lodge\ images/4.jpg);
+    background-image: url(../images/lodge\ images/home4.jpg);
   }
 }
 .banner .text {
@@ -1438,7 +1438,7 @@ footer::after {
   display: flex;
   background-color: #c68c16;
   border-radius: 0.35rem;
-  border: 1px solid#fff;
+  border: 1px solid #fff;
   padding: 0.4rem;
   opacity: 9;
   z-index: 1;
@@ -1678,7 +1678,7 @@ footer::after {
   .book {
     color: #b62427;
     padding: 10px 0;
-    border-top: solid 1px#4b3407;
+    border-top: solid 1px #4b3407;
     border-bottom: solid 1px #4b3407;
   }
   .nav {
