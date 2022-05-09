@@ -127,13 +127,13 @@ header ul li a:hover{
 @keyframes animate {
   0%,
   100% {
-    background-image: url(../images/lodge\ images/IMG_3139.jpg);
+    background-image: url(../images/lodge\ images/relodge3.jpg);
   }
   25% {
-    background-image: url(../images/lodge\ images/IMG_2881.jpg);
+    background-image: url(../images/lodge\ images/relodge1.jpg);
   }
   50% {
-    background-image: url(../images/lodge\ images/4.jpg);
+    background-image: url(../images/lodge\ images/relodge2.jpg);
   }
   75% {
     background-image: url(../images/lodge\ images/6.jpg);
@@ -549,7 +549,7 @@ header ul li a:hover{
     background-image: url(../images/29.jpg);
   }
   66.6% {
-    background-image: url(../images/31.jpg);
+    background-image: url(../images/lodge\images/IMG_3129.jpg);
   }
   
 }
@@ -617,7 +617,7 @@ header ul li a:hover{
   background-position: top;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(to right,rgba(141, 105, 26, 0.514),rgba(141, 105, 26, 0.151)),url(../images/lodge\ images/IMG_2879.jpg);
+  background: linear-gradient(to right,rgba(141, 105, 26, 0.514),rgba(141, 105, 26, 0.151)),url(../images/reservices5.jpeg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -656,7 +656,7 @@ header ul li a:hover{
   order: 2;
   width: 50%;
   height: 100%;
-  background: url(../images/26.jpg);
+  background: url(../images/reservices4.jpg);
   background-size: cover;
 }
 
@@ -665,7 +665,7 @@ header ul li a:hover{
   
   width: 50%;
   height: 100%;
-  background: url(../images/19.jpg);
+  background: url(../images/reservices2.jpeg);
   background-size: cover;
 }
 .left-ground{
