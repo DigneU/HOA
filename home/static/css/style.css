@@ -127,13 +127,13 @@ header ul li a:hover{
 @keyframes animate {
   0%,
   100% {
-    background-image: url(../images/lodge\ images/relodge3.jpg);
+    background-image: url(../images/lodge\ images/1.jpg);
   }
   25% {
-    background-image: url(../images/lodge\ images/relodge1.jpg);
+    background-image: url(../images/lodge\ images/IMG_2881.jpg);
   }
   50% {
-    background-image: url(../images/lodge\ images/relodge2.jpg);
+    background-image: url(../images/lodge\ images/10.jpg);
   }
   75% {
     background-image: url(../images/lodge\ images/6.jpg);
@@ -549,7 +549,7 @@ header ul li a:hover{
     background-image: url(../images/29.jpg);
   }
   66.6% {
-    background-image: url(../images/lodge\images/IMG_3129.jpg);
+    background-image: url(../images/room1.jpeg);
   }
   
 }
@@ -656,7 +656,7 @@ header ul li a:hover{
   order: 2;
   width: 50%;
   height: 100%;
-  background: url(../images/reservices4.jpg);
+  background: url(../images/26.jpg);
   background-size: cover;
 }
 
@@ -665,7 +665,7 @@ header ul li a:hover{
   
   width: 50%;
   height: 100%;
-  background: url(../images/reservices2.jpeg);
+  background: url(../images/19.jpg);
   background-size: cover;
 }
 .left-ground{
@@ -853,7 +853,8 @@ header ul li a:hover{
     "img-1 img-2 img-3 img-3"
     "img-1 img-4 img-5 img-6"
     "img-7 img-7 img-8 img-6"
-    "img-9 img-9 img-10 img-10";
+    "img-9 img-9 img-10 img-10"
+    "img-11 img-12 img-13 img-14";
 }
 .image-gallery a {
   position: relative;
@@ -906,7 +907,7 @@ header ul li a:hover{
 }
 .img-3 {
   grid-area: img-3;
-  background-image: url(../images/camping/img-3.jpg);
+  background-image: url(../images/camping/events1.jpg);
 }
 .img-4 {
   grid-area: img-4;
@@ -919,15 +920,15 @@ header ul li a:hover{
 .img-6 {
   grid-area: img-6;
   min-height: 51.5rem;
-  background-image: url(../images/camping/img-6.jpg);
+  background-image: url(../images/camping/img-6.jpeg);
 }
 .img-7 {
   grid-area: img-7;
-  background-image: url(../images/camping/img-7.jpg);
+  background-image: url(../images/camping/events4.jpeg);
 }
 .img-8 {
   grid-area: img-8;
-  background-image: url(../images/camping/img-8.jpg);
+  background-image: url(../images/camping/img8.jpeg);
 }
 .img-9 {
   grid-area: img-9;
@@ -935,7 +936,23 @@ header ul li a:hover{
 }
 .img-10 {
   grid-area: img-10;
-  background-image: url(../images/camping/img-10.jpg);
+  background-image: url(../images/camping/events7.jpeg);
+}
+.img-11 {
+  grid-area: img-11;
+  background-image: url(../images/camping/img-11.jpeg);
+}
+.img-12 {
+  grid-area: img-12;
+  background-image: url(../images/camping/img-12.jpeg);
+}
+.img-13 {
+  grid-area: img-13;
+  background-image: url(../images/camping/img-13.jpeg);
+}
+.img-14 {
+  grid-area: img-14;
+  background-image: url(../images/camping/events6.jpeg);
 }
 
 .camp-container::after {
