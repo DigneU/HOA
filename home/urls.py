@@ -17,5 +17,6 @@ urlpatterns = [
     # path('contact.html', views.contact_create, name='contact_create'),
     path('room_list.html', views.roomlist, name='roomlist'), 
     path('room_booking', views.booking_create, name='booking_create'),
+    path('testimonial.html',views.testimonial, name='testimonial'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns=urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

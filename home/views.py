@@ -135,6 +135,9 @@ def camping(request):
 def about(request):
     return render(request, 'about.html')
 
+def testimonial(request):
+    return render(request,'testimonial.html')
+
 def roomlist(request):
     rooms = Room.objects.all()
     context={
