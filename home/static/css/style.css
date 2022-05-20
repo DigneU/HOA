@@ -425,16 +425,15 @@ header ul li a:hover{
   color: white;
   width: 25%;
   margin: auto;
-  margin-top: 5%;
-  padding: 1rem;
+  margin-top: 2%;
 }
-.rcontainer{
+.sec4-inner{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 40px;
   width: 80%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
 .rcard{
   text-align: center;
@@ -1612,6 +1611,18 @@ footer::after {
     margin-right: -120px;
   }
 
+  .sec4-inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #parreview{
+    width: 300px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 10; /* number of lines to show */
+     -webkit-box-orient: vertical;
+  }
   .cont-txt {
     width: 30%;
   }
@@ -1711,17 +1722,38 @@ footer::after {
   .sec3-inner .text {
     width: 70%;
   }
-  .sec4-inner .text {
-    width: 70%;
-  }
   .sec3-inner .img {
     margin-right: -100px;
+  }
+  .sec4 {
+    padding: 60px 0 0;
+    padding-bottom: 5em;
+  }
+  .sec4-inner {   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    width: 80%;
+  }
+  .rcard{
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+  }
+  #parreview{
+    width: 200px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 10; /* number of lines to show */
+     -webkit-box-orient: vertical;
   }
   .cont-txt {
     width: 40%;
   }
   .map {
-    height: 60vh;
+    height: 95vh;
   }
   .contact-in {
     width: 95%;
@@ -1769,9 +1801,9 @@ footer::after {
       "img-1 img-1 img-2 img-2"
       "img-1 img-1 img-3 img-3"
       "img-4 img-4 img-5 img-5"
-      "img-6 img-7 img-7 img-10"
-      "img-6 img-8 img-9 img-9"
-      "img-11 img-12 img-13 img-14";
+      "img-6 img-6 img-7 img-7"
+      "img-8 img-9 img-9 img-9"
+      "img-10 img-10 img-10 img-10";
   }
 
   .image-gallery a {
@@ -1969,6 +2001,30 @@ footer::after {
   }
   .sec3-inner .img {
     margin-top: -18.5em;
+  }  
+  .sec4 {
+    padding: 60px 0 0;
+    padding-bottom: 5em;
+  }
+  .sec4-inner {   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    width: 90%;
+  }
+  .rcard{
+    text-align: center;
+    padding: 1rem;
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 90px;
+  }
+  #parreview{
+    width: 180px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 8; /* number of lines to show */
+     -webkit-box-orient: vertical;
   }
   .map {
     height: 140vh;
@@ -2075,7 +2131,29 @@ footer::after {
   width: 70%;
   font-size: 20px;
 } */
-
+  .sec4 div {
+    display: block;
+    max-width: 100%;
+    margin-top: 5%;
+  }
+  .sec4 {
+    padding: 60px 0 0;
+    padding-bottom: 5em;
+  }
+  .rcard{
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 90px;
+  }
+  #parreview{
+    width: 300px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 10; /* number of lines to show */
+     -webkit-box-orient: vertical;
+  }
   .wrapper {
     flex-direction: column;
     height: 100vh;
@@ -2186,6 +2264,9 @@ footer::after {
   .sec1-about {
     padding: 40px 0;
   }
+  .rcard.rcard-1 .rcard-2 .rcard-3 {
+    width:100%;
+  }
 
   .image-gallery {
     grid-template-areas:
@@ -2254,7 +2335,7 @@ footer::after {
     width: 90%;
   }
   .map {
-    height: 120vh;
+    height: 130vh;
   }
   .video {
     width: 95%;
@@ -2273,6 +2354,29 @@ footer::after {
 @media screen and (max-width: 360px) {
   .contact-in {
     width: 90%;
+  }
+  .sec4 div {
+    display: block;
+    max-width: 100%;
+    margin-top: 5%;
+  }
+  .sec4 {
+    padding: 60px 0 0;
+    padding-bottom: 5em;
+  }
+  .rcard{
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 90px;
+  }
+  #parreview{
+    width: 270px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 10; /* number of lines to show */
+     -webkit-box-orient: vertical;
   }
   .map {
     height: 140vh;
@@ -2303,6 +2407,14 @@ footer::after {
   .camp-txt h1 {
     font-size: 5em;
   } */
+  #parreview{
+    width: 250px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 10; /* number of lines to show */
+     -webkit-box-orient: vertical;
+  }
   .wrapper {
     height: 140vh;
 }
