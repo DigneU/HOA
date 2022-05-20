@@ -456,7 +456,7 @@ header ul li a:hover{
   margin-top: 10px;
 }
 #parreview{
-  width: 200px;
+  width: 280px;
   overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
@@ -1610,7 +1610,21 @@ footer::after {
   .sec3-inner .img {
     margin-right: -120px;
   }
-
+  
+.sec4-inner{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 40px;
+  width: 80%;
+  margin: auto;
+  margin-top: 2.5%;
+}
+.rcard{
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+}
   .sec4-inner {
     width: 90%;
     margin: 0 auto;
