@@ -130,10 +130,10 @@ header ul li a:hover{
     background-image: url(../images/lodge\ images/1.jpg);
   }
   25% {
-    background-image: url(../images/lodge\ images/IMG_2881.jpg);
+    background-image: url(../images/lodge\ images/2.jpg);
   }
   50% {
-    background-image: url(../images/lodge\ images/10.jpg);
+    background-image: url(../images/lodge\ images/4.jpg);
   }
   75% {
     background-image: url(../images/lodge\ images/6.jpg);
@@ -1611,20 +1611,20 @@ footer::after {
     margin-right: -120px;
   }
   
-.sec4-inner{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 40px;
-  width: 80%;
-  margin: auto;
-  margin-top: 2.5%;
-}
-.rcard{
-  text-align: center;
-  padding: 1.5rem;
-  border-bottom-right-radius: 100px;
-  border-top-left-radius: 100px;
-}
+  .sec4-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5%;
+  }
+  .rcard{
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+  }
   .sec4-inner {
     width: 90%;
     margin: 0 auto;
