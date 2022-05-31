@@ -127,16 +127,16 @@ header ul li a:hover{
 @keyframes animate {
   0%,
   100% {
-    background-image: url(../images/lodge\ images/1.jpg);
+    background-image: url(../images/lodge\ images/1a.jpg);
   }
   25% {
-    background-image: url(../images/lodge\ images/2.jpg);
+    background-image: url(../images/lodge\ images/2a.jpg);
   }
   50% {
-    background-image: url(../images/lodge\ images/4.jpg);
+    background-image: url(../images/lodge\ images/4a.jpg);
   }
   75% {
-    background-image: url(../images/lodge\ images/6.jpg);
+    background-image: url(../images/lodge\ images/6a.jpg);
   }
 }
 .banner .text {
@@ -597,7 +597,7 @@ header ul li a:hover{
   background-position: top;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(to right,rgba(141, 105, 26, 0.514),rgba(141, 105, 26, 0.151)),url(../images/lodge\ images/2.jpg);
+  background: linear-gradient(to right,rgba(141, 105, 26, 0.514),rgba(141, 105, 26, 0.151)),url(../images/lodge\ images/2a.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -659,13 +659,13 @@ header ul li a:hover{
   order: 2;
   width: 50%;
   height: 100%;
-  background: url(../images/lodge\ images/10.jpg);
+  background: url(../images/lodge\ images/10a.jpg);
   background-size: cover;
 }
 .left-deluxe{
   width: 50%;
   height: 100%;
-  background: url(../images/lodge\ images/11.jpg);
+  background: url(../images/lodge\ images/11a.jpg);
   background-size: cover;
 }
 
@@ -673,7 +673,7 @@ header ul li a:hover{
   order: 2;
   width: 50%;
   height: 100%;
-  background: url(../images/lodge\ images/8.jpg);
+  background: url(../images/lodge\ images/8a.jpg);
   background-size: cover;
 }
 .right h1{
